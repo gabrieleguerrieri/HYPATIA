@@ -1,4 +1,4 @@
-package it.unicam.cs.pg.gui;
+package quasylab.hypatia.gui;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;

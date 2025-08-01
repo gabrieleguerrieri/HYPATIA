@@ -1,20 +1,14 @@
-package it.unicam.cs.pg.gui;
-import it.unicam.cs.pg.processing.ImageUtils;
+package quasylab.hypatia.gui;
+import quasylab.hypatia.processing.ImageUtils;
 import javafx.application.Application;
 import javafx.concurrent.Task;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.Region;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.image.WritableImage;
 import javafx.scene.control.ScrollPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -29,7 +23,6 @@ import org.opencv.imgproc.Imgproc;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Optional;
 
 /**
  * Interfaccia grafica per il preprocessing e l'elaborazione di immagini

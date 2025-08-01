@@ -1,7 +1,7 @@
-package it.unicam.cs.pg.gui;
+package quasylab.hypatia.gui;
 
-import it.unicam.cs.pg.processing.ImageSelectionWindow;
-import it.unicam.cs.pg.processing.ImageUtils;
+import quasylab.hypatia.processing.ImageSelectionWindow;
+import quasylab.hypatia.processing.ImageUtils;
 import javafx.application.Application;
 import javafx.concurrent.Task;
 import javafx.geometry.Insets;
@@ -11,7 +11,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import it.unicam.cs.pg.processing.OCR;
+import quasylab.hypatia.processing.OCR;
 import org.opencv.core.Mat;
 import java.io.File;
 import java.io.IOException;

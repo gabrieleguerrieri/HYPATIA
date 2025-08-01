@@ -1,4 +1,4 @@
-package it.unicam.cs.pg.gui;
+package quasylab.hypatia.gui;
 
 import javafx.application.Application;
 import javafx.concurrent.Task;
@@ -13,19 +13,17 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import org.datavec.image.loader.NativeImageLoader;
-import org.deeplearning4j.datasets.iterator.impl.ListDataSetIterator;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
-import org.nd4j.linalg.dataset.api.preprocessor.ImagePreProcessingScaler;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
-import it.unicam.cs.pg.modelDl4jTraining.ImagePreprocessor;
-import it.unicam.cs.pg.modelDl4jTraining.RimozioneSfondoModelArchitecture;
-import it.unicam.cs.pg.modelDl4jTraining.SuperRisoluzioneModelArchitecture;
-import it.unicam.cs.pg.modelDl4jTraining.SuperRisoluzionePatchTrainer;
-import it.unicam.cs.pg.preprocessing.PatchGenerator;
-import it.unicam.cs.pg.modelDl4jTraining.RimozioneSfondoPatchTrainer;
+import quasylab.hypatia.modelDl4jTraining.ImagePreprocessor;
+import quasylab.hypatia.modelDl4jTraining.RimozioneSfondoModelArchitecture;
+import quasylab.hypatia.modelDl4jTraining.SuperRisoluzioneModelArchitecture;
+import quasylab.hypatia.modelDl4jTraining.SuperRisoluzionePatchTrainer;
+import quasylab.hypatia.preprocessing.PatchGenerator;
+import quasylab.hypatia.modelDl4jTraining.RimozioneSfondoPatchTrainer;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

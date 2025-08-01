@@ -1,6 +1,6 @@
-package it.unicam.cs.pg.modelDl4jTraining;
+package quasylab.hypatia.modelDl4jTraining;
 
-import it.unicam.cs.pg.processing.ImageUtils;
+import quasylab.hypatia.processing.ImageUtils;
 import org.deeplearning4j.datasets.iterator.impl.ListDataSetIterator;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.nd4j.linalg.api.ndarray.INDArray;

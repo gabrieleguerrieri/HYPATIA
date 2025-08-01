@@ -1,4 +1,4 @@
-package it.unicam.cs.pg.modelDl4jTraining;
+package quasylab.hypatia.modelDl4jTraining;
 
 import org.deeplearning4j.nn.api.OptimizationAlgorithm;
 import org.deeplearning4j.nn.conf.MultiLayerConfiguration;

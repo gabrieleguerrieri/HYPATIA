@@ -1,4 +1,4 @@
-package it.unicam.cs.pg.modelTess4JTraining;
+package quasylab.hypatia.modelTess4JTraining;
 
 import java.io.BufferedReader;
 import java.io.File;

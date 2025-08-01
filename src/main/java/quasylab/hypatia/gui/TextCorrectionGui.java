@@ -1,6 +1,6 @@
-package it.unicam.cs.pg.gui;
+package quasylab.hypatia.gui;
 
-import it.unicam.cs.pg.postprocessing.TextCorrector;
+import quasylab.hypatia.postprocessing.TextCorrector;
 import javafx.application.Application;
 import javafx.concurrent.Task;
 import javafx.geometry.Insets;

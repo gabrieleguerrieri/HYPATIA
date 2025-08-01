@@ -1,4 +1,4 @@
-package it.unicam.cs.pg.processing;
+package quasylab.hypatia.processing;
 
 import javafx.scene.image.WritableImage;
 import org.datavec.image.loader.ImageLoader;

@@ -1,4 +1,4 @@
-package it.unicam.cs.pg.modelDl4jTraining;
+package quasylab.hypatia.modelDl4jTraining;
 
 import javafx.scene.control.TextArea;
 import org.opencv.core.CvType;

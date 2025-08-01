@@ -1,4 +1,4 @@
-package it.unicam.cs.pg.processing;
+package quasylab.hypatia.processing;
 
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;

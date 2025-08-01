@@ -1,4 +1,4 @@
-package it.unicam.cs.pg.postprocessing;
+package quasylab.hypatia.postprocessing;
 
 import javafx.scene.control.Alert;
 import org.deeplearning4j.models.embeddings.wordvectors.WordVectors;

@@ -1,4 +1,4 @@
-package it.unicam.cs.pg.processing;
+package quasylab.hypatia.processing;
 
 import javafx.geometry.Insets;
 import javafx.scene.Scene;

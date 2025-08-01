@@ -1,6 +1,6 @@
-package it.unicam.cs.pg.gui;
+package quasylab.hypatia.gui;
 
-import it.unicam.cs.pg.modelTess4JTraining.BoxCleaner;
+import quasylab.hypatia.modelTess4JTraining.BoxCleaner;
 import javafx.application.Application;
 import javafx.concurrent.Task;
 import javafx.geometry.Insets;
@@ -13,9 +13,8 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import it.unicam.cs.pg.modelTess4JTraining.BoxTextEditor;
-import it.unicam.cs.pg.modelTess4JTraining.ModelTrainingExecutor;
-import org.opencv.core.Core;
+import quasylab.hypatia.modelTess4JTraining.BoxTextEditor;
+import quasylab.hypatia.modelTess4JTraining.ModelTrainingExecutor;
 
 import java.io.*;
 import java.nio.file.Files;

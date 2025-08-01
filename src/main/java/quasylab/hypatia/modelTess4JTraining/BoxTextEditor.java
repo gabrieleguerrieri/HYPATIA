@@ -1,4 +1,4 @@
-package it.unicam.cs.pg.modelTess4JTraining;
+package quasylab.hypatia.modelTess4JTraining;
 
 import javafx.geometry.Insets;
 import javafx.scene.Scene;

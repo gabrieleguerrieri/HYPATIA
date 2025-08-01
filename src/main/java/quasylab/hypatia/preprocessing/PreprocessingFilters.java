@@ -1,4 +1,4 @@
-package it.unicam.cs.pg.preprocessing;
+package quasylab.hypatia.preprocessing;
 
 import org.opencv.core.*;
 import org.opencv.imgproc.Imgproc;
