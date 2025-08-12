@@ -27,7 +27,8 @@ import java.nio.file.Paths;
  * - Salvare trascrizioni
  */
 public class ProcessingTess4jGui extends Application {
-    private FileChooser fileChooser;
+    private final FileChooser fileChooserImage = new FileChooser();
+    private final FileChooser fileChooserModel = new FileChooser();
     private ComboBox<String> ocrModelComboBox;
     private ComboBox<String> languageComboBox;
     private File customTrainedDataFile = null;
@@ -44,11 +45,6 @@ public class ProcessingTess4jGui extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Processing Immagini e Trascrizione OCR");
-        fileChooser = new FileChooser();
-        File initialDirectory = new File(PROJECT_ROOT);
-        if (initialDirectory.exists() && initialDirectory.isDirectory()) {
-            fileChooser.setInitialDirectory(initialDirectory);
-        }
 
         // Inizializzazione componenti UI
         Button btnCaricaImmagine = new Button("Carica Immagine");
@@ -118,7 +114,24 @@ public class ProcessingTess4jGui extends Application {
      * Gestisce il caricamento dell'immagine e la selezione della regione
      */
     private void gestisciCaricamentoImmagine(Stage stage) {
-        File selectedFile = fileChooser.showOpenDialog(stage);
+        // Reset della selezione precedente
+        selectedImageRegion = null;
+        customTrainedDataFile = null;
+
+        // Configura filtro per immagini
+        fileChooserImage.getExtensionFilters().clear();
+        fileChooserImage.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg", "*.bmp", "*.tif", "*.tiff")
+        );
+
+        // Imposta cartella iniziale
+        File initialDirectory = new File(PROJECT_ROOT);
+        if (initialDirectory.exists() && initialDirectory.isDirectory()) {
+            fileChooserImage.setInitialDirectory(initialDirectory);
+        }
+
+        // Mostra finestra selezione file immagine
+        File selectedFile = fileChooserImage.showOpenDialog(stage);
         if (selectedFile != null) {
             Mat originalImage = ImageUtils.loadImage(selectedFile.getAbsolutePath());
             if (originalImage.empty()) {
@@ -129,6 +142,9 @@ public class ProcessingTess4jGui extends Application {
             }
         }
     }
+
+
+
 
     /**
      * Callback per la gestione della regione selezionata
@@ -143,17 +159,22 @@ public class ProcessingTess4jGui extends Application {
      * Gestisce la selezione del file del modello personalizzato
      */
     private void gestisciSelezioneModello(Stage stage) {
-        // Imposta un filtro per i file .traineddata
-        fileChooser.getExtensionFilters().clear(); // Pulisce eventuali filtri precedenti
-        fileChooser.getExtensionFilters().add(
+        // Configura filtro per modelli Tesseract
+        fileChooserModel.getExtensionFilters().clear();
+        fileChooserModel.getExtensionFilters().add(
                 new FileChooser.ExtensionFilter("Tesseract Model Files", "*.traineddata")
         );
 
-        // Mostra il dialogo di selezione file
-        File selectedFile = fileChooser.showOpenDialog(stage);
+        // Imposta cartella iniziale
+        File initialDirectory = new File(PROJECT_ROOT);
+        if (initialDirectory.exists() && initialDirectory.isDirectory()) {
+            fileChooserModel.setInitialDirectory(initialDirectory);
+        }
+
+        // Mostra finestra selezione file modello
+        File selectedFile = fileChooserModel.showOpenDialog(stage);
 
         if (selectedFile != null) {
-            // Verifica che il file abbia l'estensione corretta
             if (!selectedFile.getName().endsWith(".traineddata")) {
                 loggaErrore("Il file selezionato non è un modello Tesseract valido.");
             } else {
@@ -165,6 +186,7 @@ public class ProcessingTess4jGui extends Application {
             loggaMessaggio("Selezione annullata.");
         }
     }
+
 
     /**
      * Aggiorna i componenti UI in base al tipo di modello OCR selezionato
